@@ -2,26 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: white;
+}
+
+table.basic {
+  @apply w-full bg-white overflow-x-scroll md:overflow-x-hidden;
+}
+
+table.basic thead tr {
+  @apply bg-gradient-to-l from-blue-500 to-blue-300;
+}
+
+table th:first-child {
+  border-radius: 20px 0 0 20px;
+}
+
+table th:last-child {
+  border-radius: 0 20px 20px 0;
+}
+
+table.basic thead tr td,
+table.basic thead tr th {
+  @apply text-left text-white p-5 font-bold;
+}
+
+table.basic tr td {
+  @apply text-left text-sm p-5 border-b-[1px] border-black/30;
+  /*border: solid 1px #eee;*/
+}
+table.basic tbody tr {
+  @apply hover:bg-slate-100;
+  /*border: solid 1px #eee;*/
+}
+
+table.basic a {
+  @apply inline-flex mx-1 items-center gap-1 px-4 py-1 rounded-sm text-sm;
+}
+
+table.basic a:hover {
+  @apply bg-white text-blue-950 transition duration-300 ease-in;
 }
