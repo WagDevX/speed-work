@@ -146,7 +146,7 @@ export default function Dashboard(): JSX.Element {
                         vaga.status === "Aberto"
                           ? "bg-green-400 text-green-700"
                           : ""
-                      } justify-center rounded-lg text-green-700 font-semibold`}
+                      } justify-center rounded-lg font-semibold`}
                     >
                       {vaga.status}
                     </div>
