@@ -118,7 +118,7 @@ export default function Dashboard(): JSX.Element {
           <tbody>
             {lista.map((vaga, index) => (
               <>
-                <tr>
+                <tr key={index}>
                   <td>{index}.</td>
                   <td>
                     <button>
